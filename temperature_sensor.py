@@ -35,7 +35,6 @@ running = True
 
 while running:
     temp = read_temp()
-    print temp
     with db:
         curs.execute("INSERT INTO tempTable values(NOW(), %s)", (temp))
     if (os.path.isfile("./stopsys.txt")):

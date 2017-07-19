@@ -20,6 +20,18 @@
       <div class="container">
         <div class="row">
           <div class="card-panel col s12 m6 l6 center">
+            <h5>Gas</h5>
+            <h1 id="gas-val"></h1>
+            <a style="margin-bottom:25px;" class="waves-effect waves-light btn">Full Data</a>
+          </div>
+          <div class="card-panel col s12 m6 l6 center">
+            <h5>Energy Efficient</h5>
+            <h1 id="energy-val"></h1>
+            <a style="margin-bottom:25px;" class="waves-effect waves-light btn">Full Data</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card-panel col s12 m6 l6 center">
             <h5>Temperature</h5>
             <h1 id="temp-val"></h1>
             <a style="margin-bottom:25px;" class="waves-effect waves-light btn">Full Data</a>
@@ -32,13 +44,13 @@
         </div>
         <div class="row">
           <div class="card-panel col s12 m6 l6 center">
-            <h5>Weight</h5>
-            <h1 id="weight-val"></h1>
+            <h5>Humidity</h5>
+            <h1 id="humidity-val"></h1>
             <a style="margin-bottom:25px;" class="waves-effect waves-light btn">Full Data</a>
           </div>
           <div class="card-panel col s12 m6 l6 center">
-            <h5>Gas</h5>
-            <h1 id="gas-val"></h1>
+            <h5>Weight</h5>
+            <h1 id="weight-val"></h1>
             <a style="margin-bottom:25px;" class="waves-effect waves-light btn">Full Data</a>
           </div>
         </div>
@@ -58,6 +70,8 @@
               document.getElementById('ph-val').textContent = dataPieces[1]
               document.getElementById('weight-val').textContent = dataPieces[2]
               document.getElementById('gas-val').textContent = dataPieces[3] || 'No'
+              document.getElementById('humidity-val').textContent = dataPieces[4]
+              document.getElementById('energy-val').textContent = dataPieces[5] || 'No'
             }
           }  
           req.open('GET', './getData.php', true)

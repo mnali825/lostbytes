@@ -268,10 +268,8 @@ if __name__ == "__main__":
 
       time.sleep(0.2)
 
-      print("{} {} {} {:3.2f} {} {} {} {}".format(
-         r, s.humidity(), s.temperature(), s.staleness(),
-         s.bad_checksum(), s.short_message(), s.missing_message(),
-         s.sensor_resets()))
+      print("{}".format(
+         s.humidity()))
 
       next_reading += INTERVAL
 
