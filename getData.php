@@ -49,7 +49,7 @@
    $ph = $row2['ph'];
    $weight = $row3['weight'];
    $gas = $row4['gas'];
-   $humidity = $row4['humidity'];
+   $humidity = $row5['humidity'];
    
    echo $temp . '|';
    echo $ph . '|';
